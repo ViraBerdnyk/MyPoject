@@ -15,7 +15,7 @@ public class RegistrationTest {
     @Test
     public void registrationTest() {
         WelcomePage welcomePage = new WelcomePage();
-        RegistrationPage registrationPage = welcomePage.clickCreateAccountButton(); // Перехід до сторінки реєстрації
+        RegistrationPage registrationPage = welcomePage.clickCreateAccountButton();
 
         registrationPage.setUserName("Tom")
                 .setName("Tom")

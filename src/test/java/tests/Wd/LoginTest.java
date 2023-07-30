@@ -17,7 +17,7 @@ public class LoginTest {
 
     @Test
     public void loginTest() {
-        open("https://freelance.lsrv.in.ua/login"); // Відкрити сторінку входу
+        open("https://freelance.lsrv.in.ua/login");
 
         LoginPage loginPage = new LoginPage();
         loginPage.setUserName("Tom")
