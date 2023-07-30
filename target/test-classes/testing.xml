@@ -1,0 +1,18 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="My project" verbose="1" >
+    <test name="UI">
+        <!--        <parameter name ="browser" value="chrome"/>-->
+        <packages>
+            <package name="test.tests.Wd"/>
+        </packages>
+        <classes></classes>
+    </test>
+
+    <!--    <test name="Rest API tests" >-->
+    <!--        <packages>-->
+    <!--            <package name="test.tests.rest"/>-->
+    <!--        </packages>-->
+    <!--        <classes></classes>-->
+    <!--    </test>-->
+
+</suite>
