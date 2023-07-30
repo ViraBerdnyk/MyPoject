@@ -11,18 +11,11 @@ import org.testng.annotations.Test;
 import com.codeborne.selenide.Configuration;
 
 public class RegistrationTest {
-    private WebDriver driver;
-
-    @BeforeMethod
-    public void setUp() {
-        driver = new ChromeDriver();
-        driver.get("https://freelance.lsrv.in.ua");
-    }
 
     @Test
     public void registrationTest() {
-        WelcomePage welcomePage = new WelcomePage(driver);
-        RegistrationPage registrationPage = welcomePage.clickCreateAccountButton();
+        WelcomePage welcomePage = new WelcomePage();
+        RegistrationPage registrationPage = welcomePage.clickCreateAccountButton(); // Перехід до сторінки реєстрації
 
         registrationPage.setUserName("Tom")
                 .setName("Tom")
@@ -30,10 +23,5 @@ public class RegistrationTest {
                 .setPasswordAndConfirm("12345678")
                 .clickOnRegisterButton()
                 .clickOnSignInButton();
-    }
-
-    @AfterMethod
-    public void tearDown() {
-        driver.quit();
     }
 }

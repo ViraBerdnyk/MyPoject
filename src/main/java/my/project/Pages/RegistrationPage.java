@@ -1,14 +1,9 @@
 package my.project.Pages;
 
 import com.codeborne.selenide.SelenideElement;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
-
 import static com.codeborne.selenide.Selenide.$;
 
-public class RegistrationPage extends BasePage {
+public class RegistrationPage  {
     private SelenideElement usernameLocator = $("input[formcontrolname='username']");
     private SelenideElement nameLocator = $("input[formcontrolname='name']");
     private SelenideElement lastnameLocator = $("input[formcontrolname='lastname']");
@@ -19,8 +14,7 @@ public class RegistrationPage extends BasePage {
     private SelenideElement signInButton = $("a[href='/login']");
     private SelenideElement registrationHeader = $("h2");
 
-    public RegistrationPage(WebDriver driver) {
-        super(driver);
+    public RegistrationPage() {
     }
 
     public RegistrationPage setUserName(String username) {
@@ -50,13 +44,13 @@ public class RegistrationPage extends BasePage {
     }
 
     public RegistrationPage clickOnRegisterButton() {
-        clickButton(registerButton);
+        registerButton.click();
         return this;
     }
 
     public LoginPage clickOnSignInButton() {
-        clickButton(signInButton);
-        return new LoginPage(driver);
+        signInButton.click();
+        return new LoginPage();
     }
 
     public String getTitle() {

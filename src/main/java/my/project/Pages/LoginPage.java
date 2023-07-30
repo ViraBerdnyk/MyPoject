@@ -5,14 +5,13 @@ import org.openqa.selenium.WebDriver;
 
 import static com.codeborne.selenide.Selenide.$;
 
-public class LoginPage extends BasePage {
+public class LoginPage {
     private SelenideElement usernameLocator = $("#mat-input-0");
     private SelenideElement passwordLocator = $("#mat-input-1");
     private SelenideElement logInButtonLocator = $(".mat-button-wrapper");
     private SelenideElement loginHeader = $("h2");
 
-    public LoginPage(WebDriver driver) {
-        super(driver);
+    public LoginPage() {
     }
 
     public LoginPage setUserName(String username) {
@@ -28,7 +27,7 @@ public class LoginPage extends BasePage {
     }
 
     public LoginPage clickOnLogInButton() {
-        clickButton(logInButtonLocator);
+        logInButtonLocator.click();
         return this;
     }
 
@@ -36,7 +35,5 @@ public class LoginPage extends BasePage {
         return loginHeader.getText();
     }
 }
-
-
 
 
