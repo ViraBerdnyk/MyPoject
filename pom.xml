@@ -21,6 +21,7 @@
         <jsonVersion>20230618</jsonVersion>
         <gsonVersion>2.10.1</gsonVersion>
         <lombokVersion>1.18.28</lombokVersion>
+        <extentReportVersion>1.0.7</extentReportVersion>
     </properties>
 
 
@@ -85,8 +86,12 @@
             <version>${lombokVersion}</version>
             <scope>provided</scope>
         </dependency>
-
-
+        <!-- Reports -->
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports-testng-adapter</artifactId>
+            <version>${extentReportVersion}</version>
+        </dependency>
     </dependencies>
 
 
@@ -98,9 +103,8 @@
                 <version>3.1.0</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <suiteXmlFile>src/test/resources/rest.testng.xml</suiteXmlFile>
+                        <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
                     </suiteXmlFiles>
-                    
                     <systemProperties>
                         <ur1>http:/test.site</ur1>
                     </systemProperties>
