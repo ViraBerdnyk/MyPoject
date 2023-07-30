@@ -21,3 +21,4 @@ public class DriverHolder {
         return ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
     }
 }
+

@@ -1,17 +1,17 @@
 package tests.Wd;
+
 import my.project.Pages.LoginPage;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import com.codeborne.selenide.Configuration;
-import static com.codeborne.selenide.Selenide.open;
 
+import static com.codeborne.selenide.Selenide.open;
 
 
 public class LoginTest {
 
     @BeforeClass
     public void setUp() {
-
         Configuration.browserSize = "1920x1080";
     }
 
@@ -25,3 +25,4 @@ public class LoginTest {
                 .clickOnLogInButton();
     }
 }
+

@@ -35,5 +35,3 @@ public class LoginPage {
         return loginHeader.getText();
     }
 }
-
-
