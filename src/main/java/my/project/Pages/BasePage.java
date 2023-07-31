@@ -1,27 +1,24 @@
 package my.project.Pages;
 
 import com.codeborne.selenide.SelenideElement;
-import com.codeborne.selenide.WebDriverRunner;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-
-import java.time.Duration;
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.page;
 
 public class BasePage {
-
-
-    protected WebDriverWait webDriverWait;
-
-    public BasePage() {
-        webDriverWait = new WebDriverWait(WebDriverRunner.getWebDriver(), Duration.ofSeconds(10));
+    protected SelenideElement clickButton(SelenideElement button) {
+        button.click();
+        return button;
     }
 
-    protected void clickButton(SelenideElement button) {
-        webDriverWait.until(ExpectedConditions.elementToBeClickable(button)).click();
+    public LoginPage navigateToLoginPage() {
+        clickButton($("a[href='/login']"));
+        return page(LoginPage.class);
+    }
+
+    public WelcomePage navigateToWelcomePage() {
+        clickButton($("a[href='/']"));
+        return page(WelcomePage.class);
     }
 }
-
-
-
 

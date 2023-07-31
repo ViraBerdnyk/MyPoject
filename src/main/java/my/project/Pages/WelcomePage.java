@@ -1,13 +1,12 @@
 package my.project.Pages;
 import com.codeborne.selenide.SelenideElement;
-import org.openqa.selenium.WebDriver;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 
 public class WelcomePage  {
-    private SelenideElement loginLocator = $("a[href='/login']");
-    private SelenideElement createAccountLocator = $("a[href='/register']");
+    private final SelenideElement loginLocator = $("a[href='/login']");
+    private final SelenideElement createAccountLocator = $("a[href='/register']");
 
     public WelcomePage() {
         open("https://freelance.lsrv.in.ua");
