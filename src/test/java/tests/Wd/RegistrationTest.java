@@ -2,9 +2,10 @@ package tests.Wd;
 
 import my.project.Pages.RegistrationPage;
 import my.project.Pages.WelcomePage;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-
+@Listeners
 public class RegistrationTest {
 
     @Test

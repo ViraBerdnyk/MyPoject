@@ -7,10 +7,12 @@ import my.project.Pages.LoginPage;
 import my.project.Pages.ProfilePage;
 import my.project.Pages.WelcomePage;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import static com.codeborne.selenide.Selenide.open;
 import static org.testng.Assert.assertEquals;
 
+@Listeners
 public class ProfileTest {
     @BeforeClass
     public void setUp() {
@@ -32,7 +34,6 @@ public class ProfileTest {
         editPopup.setName("John")
                 .setLastname("Doe")
                 .clickOnUpdateButton();
-
 
         assertEquals(profilePage.getUserFullName(), "John Doe");
     }

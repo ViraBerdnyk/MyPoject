@@ -4,6 +4,12 @@ package my.project.Pages;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Selenide.*;
+import com.codeborne.selenide.ElementsCollection;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import static com.codeborne.selenide.Selenide.*;
 
 
 public class ProfilePage {
