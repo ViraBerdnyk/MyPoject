@@ -41,7 +41,7 @@ public class CreateJobListingTest {
         double jobPrice = 100.0;
         profilePage = addJobPage.addNewJob(jobTitle, jobDescription, jobPrice);
 
-        // Verify if it is displayed in the list of user's jobs
+
         assertTrue(profilePage.isJobDisplayedInMyJobs(jobTitle));
     }
 }
