@@ -26,9 +26,9 @@ public class LoginPage {
         return this;
     }
 
-    public LoginPage clickOnLogInButton() {
+    public ProfilePage clickOnLogInButton() {
         logInButtonLocator.click();
-        return this;
+        return new ProfilePage();
     }
 
     public String getLoginHeader() {

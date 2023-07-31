@@ -3,10 +3,11 @@ package my.project.Pages;
 
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
-import com.codeborne.selenide.ElementsCollection;
+import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.SelenideElement;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import static com.codeborne.selenide.Selenide.*;
@@ -20,6 +21,7 @@ public class ProfilePage {
     private final SelenideElement editInfoButton = $x("//span[text()='Edit Info'] /parent::button");
     private final SelenideElement closeProfileButton = $x("//span[text()='Close profile'] /parent::button");
     private final SelenideElement profileMenuItem = $x("//button[@routerlink='/profile']");
+    private final SelenideElement addJobButton = $x("//span[text()=' Create job ']/parent::button");
 
     public String getPageTitle() {
         return profileTitle.getText();
@@ -50,5 +52,20 @@ public class ProfilePage {
     public WelcomePage closeProfile() {
         closeProfileButton.click();
         return new WelcomePage();
+    }
+
+    public boolean isJobDisplayedInMyJobs(String jobTitle) {
+        List<SelenideElement> jobTitles = $$("div.mat-card-header-text>.mat-card-title");
+        for (SelenideElement titleElement : jobTitles) {
+            if (titleElement.getText().equals(jobTitle)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public ProfilePage clickOnAddJobButton() {
+        addJobButton.$(".mat-button-wrapper").click();
+        return this;
     }
 }
