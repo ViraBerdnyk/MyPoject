@@ -10,10 +10,10 @@ import static com.codeborne.selenide.Selenide.open;
 
 @Listeners
 public class LoginTest {
-
     @BeforeClass
     public void setUp() {
         Configuration.browserSize = "1920x1080";
+        Configuration.browserCapabilities.setCapability("acceptInsecureCerts", true); // Дозволяємо cookies
     }
 
     @Test
@@ -26,4 +26,3 @@ public class LoginTest {
                 .clickOnLogInButton();
     }
 }
-

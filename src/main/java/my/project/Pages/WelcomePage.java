@@ -1,7 +1,8 @@
 package my.project.Pages;
+import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+
+import static com.codeborne.selenide.Selenide.*;
 
 
 public class WelcomePage  {
@@ -21,4 +22,21 @@ public class WelcomePage  {
         createAccountLocator.click();
         return new RegistrationPage();
     }
+
+    public JobDetailsPage clickOnJobListing(int index) {
+        // Знайдіть список оголошень і виберіть оголошення за індексом
+        ElementsCollection jobListings = $$(".job-listing");
+        if (jobListings.size() >= index) {
+            // Клікніть на оголошення за індексом
+            jobListings.get(index - 1).click();
+            // Поверніть сторінку деталей оголошення
+            return new JobDetailsPage();
+        } else {
+            throw new IndexOutOfBoundsException("Job listing not found with index: " + index);
+        }
+    }
 }
+
+
+
+

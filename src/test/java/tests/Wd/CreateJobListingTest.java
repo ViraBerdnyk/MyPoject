@@ -34,7 +34,7 @@ public class CreateJobListingTest {
         profilePage.clickOnProfileDropdownButton();
         profilePage.clickOnProfileMenuItem();
 
-        // Create a new job listing
+
         AddJobPage addJobPage = new AddJobPage();
         String jobTitle = "New Job Listing";
         String jobDescription = "This is a test job listing.";
