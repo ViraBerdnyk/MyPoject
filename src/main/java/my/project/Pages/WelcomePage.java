@@ -1,16 +1,15 @@
 package my.project.Pages;
+import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+
+import static com.codeborne.selenide.Selenide.*;
 
 
 public class WelcomePage  {
     private final SelenideElement loginLocator = $("a[href='/login']");
     private final SelenideElement createAccountLocator = $("a[href='/register']");
 
-    public WelcomePage() {
-        open("https://freelance.lsrv.in.ua");
-    }
+
 
     public LoginPage clickLogInButton() {
         loginLocator.click();
@@ -22,3 +21,4 @@ public class WelcomePage  {
         return new RegistrationPage();
     }
 }
+

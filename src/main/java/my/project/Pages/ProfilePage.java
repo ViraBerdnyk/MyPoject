@@ -1,15 +1,13 @@
 package my.project.Pages;
 
 
-import com.codeborne.selenide.SelenideElement;
-
-import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.*;
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
 import java.util.List;
 
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
 
 
@@ -22,6 +20,9 @@ public class ProfilePage {
     private final SelenideElement closeProfileButton = $x("//span[text()='Close profile'] /parent::button");
     private final SelenideElement profileMenuItem = $x("//button[@routerlink='/profile']");
     private final SelenideElement addJobButton = $x("//span[text()=' Create job ']/parent::button");
+
+    private final SelenideElement viewInfoButton = $x("//mat-icon[@class ='mat-icon notranslate material-icons mat-icon-no-color']");
+
 
     public String getPageTitle() {
         return profileTitle.getText();
@@ -68,4 +69,12 @@ public class ProfilePage {
         addJobButton.$(".mat-button-wrapper").click();
         return this;
     }
-}
+
+    public JobDetailsPage clickViewInfoButton() {
+        viewInfoButton.shouldBe(visible).shouldBe(Condition.enabled).click();
+        return new JobDetailsPage();
+
+    }
+
+    }
+
