@@ -5,29 +5,16 @@ import com.codeborne.selenide.Configuration;
 import my.project.Pages.EditUserProfilePopup;
 import my.project.Pages.LoginPage;
 import my.project.Pages.ProfilePage;
-import my.project.Pages.WelcomePage;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Listeners;
-import org.testng.annotations.Test;
-import tests.listeners.CustomExtentReportsListener;
 
-import static com.codeborne.selenide.Selenide.open;
+import org.testng.annotations.Test;
+
 import static org.testng.Assert.assertEquals;
 
-@Listeners({CustomExtentReportsListener.class})
-public class ProfileTest {
-    @BeforeClass
-    public void setUp() {
-        Configuration.browserSize = "1920x1080";
-    }
+public class ProfileTest extends BaseTest {
 
     @Test
     public void profileTest() {
-        WelcomePage welcomePage = open("https://freelance.lsrv.in.ua/profile", WelcomePage.class);
-        LoginPage loginPage = welcomePage.clickLogInButton();
-        loginPage.setUserName("Tom")
-                .setPassword("12345678")
-                .clickOnLogInButton();
+        loginAsTom();
 
         ProfilePage profilePage = new ProfilePage();
         profilePage.clickOnProfileDropdownButton();
@@ -40,3 +27,4 @@ public class ProfileTest {
         assertEquals(profilePage.getUserFullName(), "John Doe");
     }
 }
+
