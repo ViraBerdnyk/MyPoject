@@ -1,7 +1,6 @@
-package my.project.Pages;
+package my.project.Selenid;
 
 import com.codeborne.selenide.SelenideElement;
-
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.page;
 

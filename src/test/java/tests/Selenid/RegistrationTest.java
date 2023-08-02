@@ -1,7 +1,7 @@
-package tests.Wd;
+package tests.Selenid;
 
-import my.project.Pages.RegistrationPage;
-import my.project.Pages.WelcomePage;
+import my.project.Selenid.RegistrationPage;
+import my.project.Selenid.WelcomePage;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 

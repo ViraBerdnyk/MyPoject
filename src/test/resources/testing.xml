@@ -3,7 +3,7 @@
     <test name="UI">
         <!--        <parameter name ="browser" value="chrome"/>-->
         <packages>
-            <package name="test.tests.Wd"/>
+            <package name="test.tests.Selenid"/>
         </packages>
         <classes></classes>
     </test>

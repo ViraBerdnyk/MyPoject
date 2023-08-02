@@ -1,9 +1,7 @@
-package my.project.Pages;
+package my.project.Selenid;
 
 
 import com.codeborne.selenide.SelenideElement;
-import org.openqa.selenium.WebDriver;
-
 import static com.codeborne.selenide.Selenide.$;
 
 public class LoginPage {

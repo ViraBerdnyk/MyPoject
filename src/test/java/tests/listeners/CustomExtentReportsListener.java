@@ -3,7 +3,7 @@ package tests.listeners;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.service.ExtentTestManager;
 import com.aventstack.extentreports.testng.listener.ExtentITestListenerClassAdapter;
-import my.project.Pages.DriverHolder;
+import my.project.Selenid.DriverHolder;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;

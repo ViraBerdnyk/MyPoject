@@ -1,8 +1,6 @@
-package my.project.Pages;
+package my.project.Selenid;
 
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
-
 import static com.codeborne.selenide.Selenide.*;
 
 public class AddJobPage {

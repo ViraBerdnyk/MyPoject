@@ -1,9 +1,8 @@
-package my.project.Pages;
+package my.project.Selenid;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-
 import java.io.File;
 
 public class DriverHolder {
