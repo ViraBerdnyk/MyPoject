@@ -24,7 +24,7 @@ public class UserJobManagementTest extends BaseTest {
         assertEquals(commentsNumber, 5);
 
         SelenideElement scrollJobs = $x("//app-my-jobs");
-        SelenideElement removeJob = $x("//mat-icon[@class='mat-icon notranslate mat-warn material-icons']");
+        SelenideElement removeJob = $x("//mat-card > mat-card-actions > button]");
 
         scrollJobs.scrollTo();
 
@@ -34,6 +34,3 @@ public class UserJobManagementTest extends BaseTest {
         assertTrue(!profilePage.isJobDisplayedInMyJobs(jobTitle));
     }
 }
-
-
-

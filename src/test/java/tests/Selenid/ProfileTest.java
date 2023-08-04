@@ -1,10 +1,8 @@
-package tests.Wd;
+package tests.Selenid;
 
 
-import com.codeborne.selenide.Configuration;
-import my.project.Pages.EditUserProfilePopup;
-import my.project.Pages.LoginPage;
-import my.project.Pages.ProfilePage;
+import my.project.Selenid.EditUserProfilePopup;
+import my.project.Selenid.ProfilePage;
 
 import org.testng.annotations.Test;
 

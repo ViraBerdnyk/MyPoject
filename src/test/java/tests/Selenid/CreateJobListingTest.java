@@ -1,7 +1,7 @@
-package tests.Wd;
+package tests.Selenid;
 
-import my.project.Pages.AddJobPage;
-import my.project.Pages.ProfilePage;
+import my.project.Selenid.AddJobPage;
+import my.project.Selenid.ProfilePage;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertTrue;

@@ -1,7 +1,9 @@
 package tests.Selenid;
 
-import my.project.Selenid.*;
+import my.project.Selenid.JobDetailsPage;
+import my.project.Selenid.ProfilePage;
 import org.testng.annotations.Test;
+
 import static org.testng.AssertJUnit.assertTrue;
 
 public class UserInteractionTest extends BaseTest {
@@ -18,6 +20,4 @@ public class UserInteractionTest extends BaseTest {
         assertTrue(jobDetailsPage.isCommentDisplayed(commentText));
     }
 }
-
-
 
